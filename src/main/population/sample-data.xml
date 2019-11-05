@@ -133,5 +133,11 @@
 		<property name="reward" value="60000"/>
 		<property name="ticker" value="RXXXX-99999"/>
 	</bean>
-
+	<!-- Customisation -->
+	<bean id="customisation" class="acme.entities.customisations.Customisation">
+		<property name="customisationsEn" value="“sex, hard core, viagra, cialis,  nigeria, you’ve won, million dollar"/>
+		<property name="customisationsEs" value="“sexo, hard core viagra, cialis,  nigeria, has ganado, millon dolares"/>
+		
+		<property name="threshold" value="1.00"/>
+	</bean>
 </beans>

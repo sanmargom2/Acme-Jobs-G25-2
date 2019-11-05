@@ -50,6 +50,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `customisation` (
+       `id` integer not null,
+        `version` integer not null,
+        `customisations_en` varchar(255),
+        `customisations_es` varchar(255),
+        `threshold` double precision,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `investor` (
        `id` integer not null,
         `version` integer not null,
