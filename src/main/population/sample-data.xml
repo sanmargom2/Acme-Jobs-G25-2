@@ -51,6 +51,8 @@
 		<property name="reward" value="30000" />
 		<property name="telephone" value="+34 (963) 258741" />
 		<property name="ticker" value="RXXXX-99999" />
+		<property name="stars" value="3" />
+		
 	</bean>
 
 	<bean id="request02" class="acme.entities.requests.Request">
@@ -61,6 +63,8 @@
 		<property name="reward" value="60000" />
 		<property name="telephone" value="+88 (666) 6666633" />
 		<property name="ticker" value="RXXXA-99910" />
+				<property name="stars" value="4" />
+		
 	</bean>
 
 </beans>
