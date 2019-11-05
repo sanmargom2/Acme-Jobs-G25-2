@@ -17,5 +17,7 @@ authenticated.request.form.label.deadline=Deadline
 authenticated.request.form.label.description=Description
 authenticated.request.form.label.ticker=Ticker
 authenticated.request.form.label.reward=Reward
+authenticated.request.form.label.stars=Stars
 authenticated.request.form.button.return=Return
+master.menu.authenticated.request=Request
 master.menu.request=Request

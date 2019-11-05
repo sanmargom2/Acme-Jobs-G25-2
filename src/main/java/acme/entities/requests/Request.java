@@ -55,3 +55,4 @@ public class Request extends DomainEntity {
 	private String telephone;
 
 }
+
