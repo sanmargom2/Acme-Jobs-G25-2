@@ -1,38 +1,38 @@
 
-package acme.features.authenticated.announcement;
+package acme.features.authenticated.challenge;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.announcements.Announcement;
+import acme.entities.challenges.Challenge;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedAnnouncementListService implements AbstractListService<Authenticated, Announcement> {
+public class AuthenticatedChallengeListService implements AbstractListService<Authenticated, Challenge> {
 
 	// Internal Service -----------------------------------------------
 
 	@Autowired
-	AuthenticatedAnnouncementRepository repository;
+	AuthenticatedChallengeRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Announcement> request) {
+	public boolean authorise(final Request<Challenge> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public Collection<Announcement> findMany(final Request<Announcement> request) {
+	public Collection<Challenge> findMany(final Request<Challenge> request) {
 		assert request != null;
 
-		Collection<Announcement> result;
+		Collection<Challenge> result;
 
 		result = this.repository.findManyAll();
 
@@ -40,12 +40,12 @@ public class AuthenticatedAnnouncementListService implements AbstractListService
 	}
 
 	@Override
-	public void unbind(final Request<Announcement> request, final Announcement entity, final Model model) {
+	public void unbind(final Request<Challenge> request, final Challenge entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "moment", "title");
+		request.unbind(entity, model, "title", "deadline", "description", "goal", "reward");
 	}
 
 }

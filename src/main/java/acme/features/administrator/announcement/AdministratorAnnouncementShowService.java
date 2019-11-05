@@ -1,7 +1,5 @@
 
-package acme.features.authenticated.announcement;
-
-import java.util.Collection;
+package acme.features.administrator.announcement;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,16 +7,16 @@ import org.springframework.stereotype.Service;
 import acme.entities.announcements.Announcement;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
-import acme.framework.services.AbstractListService;
+import acme.framework.entities.Administrator;
+import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedAnnouncementListService implements AbstractListService<Authenticated, Announcement> {
+public class AdministratorAnnouncementShowService implements AbstractShowService<Administrator, Announcement> {
 
 	// Internal Service -----------------------------------------------
 
 	@Autowired
-	AuthenticatedAnnouncementRepository repository;
+	AdministratorAnnouncementRepository repository;
 
 
 	@Override
@@ -29,12 +27,14 @@ public class AuthenticatedAnnouncementListService implements AbstractListService
 	}
 
 	@Override
-	public Collection<Announcement> findMany(final Request<Announcement> request) {
+	public Announcement findOne(final Request<Announcement> request) {
 		assert request != null;
 
-		Collection<Announcement> result;
+		Announcement result;
+		int id;
 
-		result = this.repository.findManyAll();
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneById(id);
 
 		return result;
 	}

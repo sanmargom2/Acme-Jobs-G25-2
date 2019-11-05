@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.announcement;
+package acme.features.administrator.announcement;
 
 import java.util.Collection;
 
@@ -9,16 +9,16 @@ import org.springframework.stereotype.Service;
 import acme.entities.announcements.Announcement;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
+import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AuthenticatedAnnouncementListService implements AbstractListService<Authenticated, Announcement> {
+public class AdministratorAnnouncementListService implements AbstractListService<Administrator, Announcement> {
 
 	// Internal Service -----------------------------------------------
 
 	@Autowired
-	AuthenticatedAnnouncementRepository repository;
+	AdministratorAnnouncementRepository repository;
 
 
 	@Override
