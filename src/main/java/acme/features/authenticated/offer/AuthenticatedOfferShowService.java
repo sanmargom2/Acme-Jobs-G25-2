@@ -1,48 +1,48 @@
 
-package acme.features.authenticated.announcement;
+package acme.features.authenticated.offer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.announcements.Announcement;
+import acme.entities.offers.Offer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuthenticatedAnnouncementShowService implements AbstractShowService<Authenticated, Announcement> {
+public class AuthenticatedOfferShowService implements AbstractShowService<Authenticated, Offer> {
 
 	// Internal State -------------------------------------------------
 
 	@Autowired
-	AuthenticatedAnnouncementRepository repository;
+	AuthenticatedOfferRepository repository;
 
 
-	//AbstractShowService<Administrator, Announcement> interface -------
+	//AbstractShowService<Administrator, Offer> interface -------
 
 	@Override
-	public boolean authorise(final Request<Announcement> request) {
+	public boolean authorise(final Request<Offer> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Announcement> request, final Announcement entity, final Model model) {
+	public void unbind(final Request<Offer> request, final Offer entity, final Model model) {
 
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "moreInfo", "text");
+		request.unbind(entity, model, "ticker", "title", "text", "min", "max", "moment", "deadline");
 	}
 
 	@Override
-	public Announcement findOne(final Request<Announcement> request) {
+	public Offer findOne(final Request<Offer> request) {
 		assert request != null;
 
-		Announcement result;
+		Offer result;
 		int id;
 
 		id = request.getModel().getInteger("id");

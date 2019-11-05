@@ -4,7 +4,7 @@
 authenticated.announcement.form.label.title = Título:
 authenticated.announcement.form.label.moment = Momento:
 authenticated.announcement.form.label.moreInfo = Más Información:
-authenticated.announcement.form.label.text = Texto:
+authenticated.announcement.form.label.text = Descripción:
 authenticated.announcement.form.button.return = Volver
 
 authenticated.announcement.list.label.moment = Momento
