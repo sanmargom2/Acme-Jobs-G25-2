@@ -57,8 +57,12 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
-master.menu.user-account.investor = Investors
 master.menu.user-account.announcement = Announcements
+
+# master.menu.investor ##########################################################
+
+master.menu.investor = Investor
+master.menu.authenticated.investor = Investor
 
 # master.footer ###############################################################
 

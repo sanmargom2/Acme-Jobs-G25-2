@@ -57,6 +57,7 @@
 		<property name="description" value="This is a challenge"/>
 		<property name="goal" value="Bronze" />
 		<property name="reward" value="100" />
+	</bean>
 
 	
 	<!-- Announcements -->
@@ -64,7 +65,7 @@
 	<bean id="announcement01" class="acme.entities.announcements.Announcement">
 		<property name="title" value="Sample Announcement 01"/>
 		<property name="moment" value="2019/06/10 10:35"/>
-		<property name="moreInfo"><null/></property>
+		<property name="moreInfo" value="http://www.example.com"/>
 		<property name="text" value="This is the description of a Sample Announcement"/>
 	</bean>
 	
@@ -130,7 +131,7 @@
 		<property name="deadline" value="2020/02/02 10:00"/>
 		<property name="description" value="This is not a description"/>
 		<property name="reward" value="60000"/>
-		<property name="ticker" value="RXXXA-99910"/>
+		<property name="ticker" value="RXXXX-99999"/>
 	</bean>
 
 </beans>
