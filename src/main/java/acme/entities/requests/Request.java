@@ -48,7 +48,6 @@ public class Request extends DomainEntity {
 	private Double reward;
 
 	@NotBlank
-	@UniqueElements
 	@Pattern(regexp = "RXXXX-99999")
 	private String ticker;
 	

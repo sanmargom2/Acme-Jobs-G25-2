@@ -30,6 +30,18 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `challenge` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `reward_goal_bronze` integer,
+        `reward_goal_gold` integer,
+        `reward_goal_silver` integer,
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `consumer` (
        `id` integer not null,
         `version` integer not null,
@@ -79,7 +91,6 @@
         `description` varchar(255),
         `moment` datetime(6),
         `reward` double precision,
-        `telephone` integer,
         `ticker` varchar(255),
         `title` varchar(255),
         primary key (`id`)

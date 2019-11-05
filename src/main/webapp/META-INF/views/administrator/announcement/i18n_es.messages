@@ -1,9 +1,8 @@
-authenticated.administrator.list.label.moment = Momento
-authenticated.administrator.list.label.title = Título
+administrator.announcement.list.label.moment = Momento
+administrator.announcement.list.label.title = Título
 
-authenticated.administrator.form.label.title = Titulo
-authenticated.administrator.form.label.moment = Momento
-authenticated.administrator.form.label.moreInfo = Mas info
-authenticated.administrator.form.label.text = texto
-
-authenticated.administrator.form.label.return = Volver
+administrator.announcement.form.label.title = Titulo
+administrator.announcement.form.label.moment = Momento
+administrator.announcement.form.label.moreInfo = Mas info
+administrator.announcement.form.label.text = texto
+administrator.announcement.form.label.return = Volver
