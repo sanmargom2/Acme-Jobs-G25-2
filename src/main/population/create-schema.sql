@@ -59,6 +59,7 @@
         `description` varchar(255),
         `moment` datetime(6),
         `reward` double precision,
+        `stars` integer,
         `telephone` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
