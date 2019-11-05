@@ -19,23 +19,11 @@ public class AuthenticatedAnnouncementShowService implements AbstractShowService
 	AuthenticatedAnnouncementRepository repository;
 
 
-	//AbstractShowService<Administrator, Announcement> interface -------
-
 	@Override
 	public boolean authorise(final Request<Announcement> request) {
 		assert request != null;
 
 		return true;
-	}
-
-	@Override
-	public void unbind(final Request<Announcement> request, final Announcement entity, final Model model) {
-
-		assert request != null;
-		assert entity != null;
-		assert model != null;
-
-		request.unbind(entity, model, "title", "moment", "moreInfo", "text");
 	}
 
 	@Override
@@ -51,4 +39,12 @@ public class AuthenticatedAnnouncementShowService implements AbstractShowService
 		return result;
 	}
 
+	@Override
+	public void unbind(final Request<Announcement> request, final Announcement entity, final Model model) {
+		assert request != null;
+		assert entity != null;
+		assert model != null;
+
+		request.unbind(entity, model, "moment", "title");
+	}
 }

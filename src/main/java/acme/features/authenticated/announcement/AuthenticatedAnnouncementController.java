@@ -16,16 +16,11 @@ import acme.framework.entities.Authenticated;
 @RequestMapping("/authenticated/announcement/")
 public class AuthenticatedAnnouncementController extends AbstractController<Authenticated, Announcement> {
 
-	//Internal Service ---------------------------------------
-
 	@Autowired
 	private AuthenticatedAnnouncementListService	listService;
 
 	@Autowired
 	private AuthenticatedAnnouncementShowService	showService;
-
-
-	//Constructors -------------------------------------------
 
 	@PostConstruct
 	private void initialise() {
