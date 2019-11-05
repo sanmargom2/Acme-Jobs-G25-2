@@ -9,6 +9,29 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+  
+  <!-- Investor -->
+	
+	<bean id="investor01" class="acme.entities.investors.Investor">
+		<property name="name" value="Mike" />
+		<property name="sector" value="Consulting" />
+		<property name="statement" value="Sample Statement"  />
+		<property name="stars" value="5" />
+	</bean>
+	
+	<bean id="investor02" class="acme.entities.investors.Investor">
+		<property name="name" value="John" />
+		<property name="sector" value="Energy" />
+		<property name="statement" value="Sample Statement"  />
+		<property name="stars" value="2" />
+	</bean>
+	
+	<bean id="investor03" class="acme.entities.investors.Investor">
+		<property name="name" value="John" />
+		<property name="sector" value="Consulting" />
+		<property name="statement" value="Sample Statement"  />
+		<property name="stars" value="5" />
+	</bean>
 		
 	<!-- Challenges -->
 	
