@@ -16,6 +16,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+
 	
 	
 	<!-- Money -->
@@ -94,6 +95,60 @@
 		<property name="text" value="This is the description of another Offer"/>
 		<property name="moment" value="2019/02/06 09:30"/>
 		<property name="deadline" value="2020/09/06 12:00"/>
+
+
+	<bean id="recordCompany01" class="acme.entities.recordCompanies.RecordCompany">
+		<property name="name" value="Enterprise1" />
+		<property name="CEO" value="Kobe Bryant" />
+		<property name="sector" value="Consulting" />
+		<property name="description" value="This is the description number 1" />
+		<property name="website" value="http://hola.com" />
+		<property name="telephone" value="+88 (666) 6666666" />
+		<property name="email" value="hola@hola.com" />
+		<property name="incorporated" value="true" />
+	</bean>
+
+	<bean id="recordCompany02" class="acme.entities.recordCompanies.RecordCompany">
+		<property name="name" value="Enterprise2" />
+		<property name="CEO" value="Michael Jordan" />
+		<property name="sector" value="Energy" />
+		<property name="description" value="This is the description number 2" />
+		<property name="website" value="http://hello.com" />
+		<property name="telephone" value="+34 (99) 9999999" />
+		<property name="email" value="hello@hello.com" />
+		<property name="incorporated" value="false" />
+	</bean>
+
+	<bean id="recordCompany03" class="acme.entities.recordCompanies.RecordCompany">
+		<property name="name" value="Enterprise3" />
+		<property name="CEO" value="Lebron James" />
+		<property name="sector" value="Industry" />
+		<property name="description" value="This is the description number 3" />
+		<property name="website" value="http://website.com" />
+		<property name="telephone" value="+99 (69) 6969696" />
+		<property name="email" value="bonjour@bonjour.com" />
+		<property name="incorporated" value="true" />
+	</bean>
+
+	<bean id="request01" class="acme.entities.requests.Request">
+		<property name="title" value="Hola" />
+		<property name="moment" value="2010/07/11 20:00" />
+		<property name="deadline" value="2021/10/30 10:00" />
+		<property name="description" value="This is a description" />
+		<property name="reward" value="30000" />
+		<property name="telephone" value="+34 (963) 258741" />
+		<property name="ticker" value="RXXXX-99999" />
+	</bean>
+
+	<bean id="request02" class="acme.entities.requests.Request">
+		<property name="title" value="Hello" />
+		<property name="moment" value="2012/07/01 21:00" />
+		<property name="deadline" value="2020/02/02 10:00" />
+		<property name="description" value="This is not a description" />
+		<property name="reward" value="60000" />
+		<property name="telephone" value="+88 (666) 6666633" />
+		<property name="ticker" value="RXXXA-99910" />
+
 	</bean>
 
 </beans>

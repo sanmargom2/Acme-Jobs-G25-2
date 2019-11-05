@@ -12,7 +12,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
-import org.hibernate.validator.constraints.UniqueElements;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -48,11 +47,11 @@ public class Request extends DomainEntity {
 	private Double reward;
 
 	@NotBlank
-	@UniqueElements
-	@Pattern(regexp = "RXXXX-99999")
+	@Pattern(regexp = "^R[a-zA-Z]{4}-\\d{5}$")
 	private String ticker;
 	
-//	
-//	@Pattern(regexp = "^[1-999][0-9] {9}")
-//	private Integer telephone;
+	
+	@Pattern(regexp = "\\+\\d{1,3}\\s\\(\\d{1,4}\\)\\s\\d{6,10}")
+	private String telephone;
+
 }
