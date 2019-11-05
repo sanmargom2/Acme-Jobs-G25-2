@@ -22,6 +22,8 @@
 	<acme:form-textarea code="authenticated.request.form.label.description" path="description" />
 	<acme:form-textarea code="authenticated.request.form.label.ticker" path="ticker" />
 	<acme:form-textbox code="authenticated.request.form.label.reward" path="reward" />
+		<acme:form-textbox code="authenticated.request.form.label.stars" path="stars" />
+	
 
 
 
