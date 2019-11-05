@@ -5,6 +5,7 @@ import javax.validation.constraints.Digits;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.URL;
 
@@ -41,9 +42,8 @@ public class RecordCompany extends DomainEntity {
 	@Email
 	private String email;
 
-	@Digits(integer = 10, fraction = 0)
-	@Min(6)
-	private Integer telephone;
+	@Pattern(regexp = "\\+\\d{1,3}\\s\\(\\d{1,4}\\)\\s\\d{6,10}")
+	private String telephone;
 	
 	private boolean incorporated;
 }

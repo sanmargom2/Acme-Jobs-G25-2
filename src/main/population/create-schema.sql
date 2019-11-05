@@ -79,7 +79,7 @@
         `incorporated` bit not null,
         `name` varchar(255),
         `sector` varchar(255),
-        `telephone` integer,
+        `telephone` varchar(255),
         `website` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -91,6 +91,7 @@
         `description` varchar(255),
         `moment` datetime(6),
         `reward` double precision,
+
         `ticker` varchar(255),
         `title` varchar(255),
         primary key (`id`)
