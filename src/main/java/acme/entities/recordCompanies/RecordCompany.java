@@ -1,0 +1,49 @@
+package acme.entities.recordCompanies;
+
+import javax.persistence.Entity;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+
+import org.hibernate.validator.constraints.URL;
+
+import acme.framework.entities.DomainEntity;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+public class RecordCompany extends DomainEntity {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@NotBlank
+	private String name;
+	
+	@NotBlank
+	private String CEO;
+
+	@NotBlank
+	private String sector;
+
+	@URL
+	private String website;
+
+	@NotBlank
+	private String description;
+
+	@NotBlank
+	@Email
+	private String email;
+
+	@Digits(integer = 10, fraction = 0)
+	@Min(6)
+	private Integer telephone;
+	
+	private boolean incorporated;
+}
