@@ -1,7 +1,9 @@
 
 package acme.features.anonymous.announcement;
 
-import java.util.Collection;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,12 +43,16 @@ public class AnonymousAnnouncementListService implements AbstractListService<Ano
 	}
 
 	@Override
-	public Collection<Announcement> findMany(final Request<Announcement> request) {
+	public List<Announcement> findMany(final Request<Announcement> request) {
 		assert request != null;
 
-		Collection<Announcement> result;
+		List<Announcement> result;
 
-		result = this.repository.findManyAll();
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DATE, -30);
+		Date dateBefore30Days = cal.getTime();
+
+		result = this.repository.findManyAll(dateBefore30Days);
 
 		return result;
 	}
