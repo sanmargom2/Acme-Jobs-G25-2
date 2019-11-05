@@ -45,7 +45,7 @@ public class AuthenticatedChallengeListService implements AbstractListService<Au
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "description", "goal", "reward");
+		request.unbind(entity, model, "title", "deadline", "description");
 	}
 
 }

@@ -9,29 +9,6 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
-  
-  <!-- Investor -->
-	
-	<bean id="investor01" class="acme.entities.investors.Investor">
-		<property name="name" value="Mike" />
-		<property name="sector" value="Consulting" />
-		<property name="statement" value="Sample Statement"  />
-		<property name="stars" value="5" />
-	</bean>
-	
-	<bean id="investor02" class="acme.entities.investors.Investor">
-		<property name="name" value="John" />
-		<property name="sector" value="Energy" />
-		<property name="statement" value="Sample Statement"  />
-		<property name="stars" value="2" />
-	</bean>
-	
-	<bean id="investor03" class="acme.entities.investors.Investor">
-		<property name="name" value="John" />
-		<property name="sector" value="Consulting" />
-		<property name="statement" value="Sample Statement"  />
-		<property name="stars" value="5" />
-	</bean>
 		
 	<!-- Challenges -->
 	
@@ -39,25 +16,28 @@
 		<property name="title" value="Challenge 01" />
 		<property name="deadline" value="2020/06/10 10:35" />
 		<property name="description" value="This is a challenge"/>
-		<property name="goal" value="Gold" />
-		<property name="reward" value="1000" />
+		<property name="rewardGoalGold" value="1000" />
+		<property name="rewardGoalSilver" value="500" />
+		<property name="rewardGoalBronze" value="100" />
 	</bean>
 	
 	<bean id="challenge02" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Challenge 02" />
 		<property name="deadline" value="2020/12/12 13:00" />
 		<property name="description" value="This is a challenge"/>
-		<property name="goal" value="Silver" />
-		<property name="reward" value="500" />
+		<property name="rewardGoalGold" value="1000" />
+		<property name="rewardGoalSilver" value="500" />
+		<property name="rewardGoalBronze" value="100" />
 	</bean>
 	
 	<bean id="challenge03" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Challenge 03" />
 		<property name="deadline" value="2020/10/10 10:10" />
 		<property name="description" value="This is a challenge"/>
-		<property name="goal" value="Bronze" />
-		<property name="reward" value="100" />
-
+		<property name="rewardGoalGold" value="1000" />
+		<property name="rewardGoalSilver" value="500" />
+		<property name="rewardGoalBronze" value="100" />
+	</bean>
 	
 	<!-- Announcements -->
 	

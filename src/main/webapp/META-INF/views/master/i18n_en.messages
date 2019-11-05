@@ -30,7 +30,6 @@ master.menu.sign-out = Sign out
 
 master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
-master.menu.anonymous.investor = Investors
 
 # master.menu.administrator ###################################################
 
@@ -57,8 +56,8 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
-master.menu.user-account.investor = Investors
 master.menu.user-account.announcement = Announcements
+master.menu.user-account.challenge = Challenges
 
 # master.footer ###############################################################
 
