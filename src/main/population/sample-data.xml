@@ -1,14 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- - sample-data.xml - - Copyright (c) 2019 Rafael Corchuelo. - - In keeping with the traditional purpose of furthering education and 
-	research, it is - the policy of the copyright owner to permit non-commercial use and redistribution of - this software. It has been tested 
-	carefully, but it is not guaranteed for any particular - purposes. The copyright owner does not offer any warranties or representations, 
-	nor do - they accept any liabilities with respect to them. -->
+<!--
+- sample-data.xml
+-
+- Copyright (c) 2019 Rafael Corchuelo.
+-
+- In keeping with the traditional purpose of furthering education and research, it is
+- the policy of the copyright owner to permit non-commercial use and redistribution of
+- this software. It has been tested carefully, but it is not guaranteed for any particular
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
+- they accept any liabilities with respect to them.
+-->
 
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+
+	
+	
+	<!-- Money -->
+	
+	<bean id="money01" class="acme.framework.datatypes.Money">
+		<property name="amount" value="30000"/>
+		<property name="currency" value="€"/>
+	</bean>
+	
+	<bean id="money02" class="acme.framework.datatypes.Money">
+		<property name="amount" value="40000"/>
+		<property name="currency" value="€"/>
+	</bean>
+	
+	<bean id="money03" class="acme.framework.datatypes.Money">
+		<property name="amount" value="50000"/>
+		<property name="currency" value="€"/>
+	</bean>
+	
+	<bean id="money04" class="acme.framework.datatypes.Money">
+		<property name="amount" value="20000"/>
+		<property name="currency" value="€"/>
+	</bean>
+	
+	<!-- Announcements -->
+	
+	<bean id="announcement01" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample Announcement 01"/>
+		<property name="moment" value="2019/06/10 10:35"/>
+		<property name="moreInfo"><null/></property>
+		<property name="text" value="This is the description of a Sample Announcement"/>
+	</bean>
+	
+	<bean id="announcement02" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample Announcement 02"/>
+		<property name="moment" value="2019/11/01 00:00"/>
+		<property name="moreInfo" value="http://www.example.com"/>
+		<property name="text" value="This is the description of another Announcement"/>
+	</bean>
+	
+	<bean id="announcement03" class="acme.entities.announcements.Announcement">
+		<property name="title" value="Sample Announcement 03"/>
+		<property name="moment" value="1900/07/06 15:05"/>
+		<property name="moreInfo" value="http://www.example.com"/>
+		<property name="text" value="This is the description of a very old Announcement"/>
+	</bean>
+	
+	
+	<!-- Offers -->
+	
+	<bean id="offer01" class="acme.entities.offers.Offer">
+		<property name="ticker" value="OABCD-12345"/>
+		<property name="title" value="Sample Offer 01"/>
+		<property name="min" ref="money01"/>
+		<property name="max" ref="money02"/>
+		<property name="text" value="This is the description of a Sample Offer"/>
+		<property name="moment" value="2019/07/06 15:05"/>
+		<property name="deadline" value="2019/12/06 17:05"/>
+	</bean>
+	
+	<bean id="offer02" class="acme.entities.offers.Offer">
+		<property name="ticker" value="OCDEF-12345"/>
+		<property name="title" value="Sample Offer 02"/>
+		<property name="min" ref="money04"/>
+		<property name="max" ref="money01"/>
+		<property name="text" value="This is the description of an old Offer"/>
+		<property name="moment" value="2019/02/06 15:05"/>
+		<property name="deadline" value="2019/08/06 17:05"/>
+	</bean>
+	
+	<bean id="offer03" class="acme.entities.offers.Offer">
+		<property name="ticker" value="OHIJK-12345"/>
+		<property name="title" value="Sample Offer 03"/>
+		<property name="min" ref="money02"/>
+		<property name="max" ref="money03"/>
+		<property name="text" value="This is the description of another Offer"/>
+		<property name="moment" value="2019/02/06 09:30"/>
+		<property name="deadline" value="2020/09/06 12:00"/>
+
 
 	<bean id="recordCompany01" class="acme.entities.recordCompanies.RecordCompany">
 		<property name="name" value="Enterprise1" />
@@ -61,6 +148,7 @@
 		<property name="reward" value="60000" />
 		<property name="telephone" value="+88 (666) 6666633" />
 		<property name="ticker" value="RXXXA-99910" />
+
 	</bean>
 
 </beans>
