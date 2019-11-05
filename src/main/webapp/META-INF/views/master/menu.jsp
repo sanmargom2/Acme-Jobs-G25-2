@@ -54,9 +54,12 @@
 			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update" access="hasRole('Provider')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRole('Consumer')"/>
 			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update" access="hasRole('Consumer')"/>
-			<acme:menu-suboption code="master.menu.user-account.investor" action="/authenticated/investor/list"/>
 			<acme:menu-suboption code="master.menu.user-account.announcement" action="/authenticated/announcement/list"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.investor" access="isAuthenticated()">
+	<acme:menu-suboption code="master.menu.authenticated.investor" action="/authenticated/investor/list"/>
+	</acme:menu-option>
 
 			<acme:menu-option code="master.menu.request" access="isAuthenticated()">
 	<acme:menu-suboption code="master.menu.authenticated.request" action="/authenticated/request/list"/>
