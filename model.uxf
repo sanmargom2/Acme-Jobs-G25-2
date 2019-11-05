@@ -299,37 +299,30 @@ has v</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
-      <y>406</y>
-      <w>266</w>
-      <h>126</h>
+
+      <x>196</x>
+      <y>266</y>
+      <w>203</w>
+      <h>133</h>
     </coordinates>
-    <panel_attributes>Announcement
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Company records
 --
-+ title: String(NotBlank)
-+ moment: Date(Temporal(TIMESTAMP),Past)
-+ moreInfo: String(URL)
-+ text: String(NotBlank)
-</panel_attributes>
++ name: String {NotBlank}
++ sector: String {NotBlank}
++ CEO : String {NotBlank}
++ description: String{NotBlank}
++ website : String{URL}
++ telephone: Integer{Digits(10)}
++ email: String{Not Blank,Email}
++ incorporated: boolean</panel_attributes>
+
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>497</x>
-      <y>406</y>
-      <w>266</w>
-      <h>126</h>
-    </coordinates>
-    <panel_attributes>Offer
---
-+ title: String(NotBlank)
-+ moment: Date(Temporal(TIMESTAMP),Past)
-+ deadline: Date(Temporal(TIMESTAMP),Future)
-+ ticker: String(NotBlank)
-+ range: Money(NotBlank)
-+ text: String(NotBlank)
-</panel_attributes>
+
     <additional_attributes/>
   </element>
 </diagram>
