@@ -35,9 +35,8 @@
         `version` integer not null,
         `deadline` datetime(6),
         `description` varchar(255),
-        `reward_goal_bronze` integer,
-        `reward_goal_gold` integer,
-        `reward_goal_silver` integer,
+        `goal` varchar(255),
+        `reward` varchar(255),
         `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -79,7 +78,7 @@
         `incorporated` bit not null,
         `name` varchar(255),
         `sector` varchar(255),
-        `telephone` varchar(255),
+        `telephone` integer,
         `website` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -91,7 +90,6 @@
         `description` varchar(255),
         `moment` datetime(6),
         `reward` double precision,
-
         `ticker` varchar(255),
         `title` varchar(255),
         primary key (`id`)
