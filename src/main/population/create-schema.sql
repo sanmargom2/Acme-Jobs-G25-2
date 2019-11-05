@@ -1,8 +1,17 @@
-
     create table `administrator` (
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `announcement` (
+       `id` integer not null,
+        `version` integer not null,
+        `moment` datetime(6),
+        `more_info` varchar(255),
+        `text` varchar(255),
+        `title` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -20,12 +29,33 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `challenge` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `goal` varchar(255),
+        `reward` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `consumer` (
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `investor` (
+       `id` integer not null,
+        `version` integer not null,
+        `name` varchar(255),
+        `sector` varchar(255),
+        `stars` integer,
+        `statement` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -47,7 +77,7 @@
         `incorporated` bit not null,
         `name` varchar(255),
         `sector` varchar(255),
-        `telephone` varchar(255),
+        `telephone` integer,
         `website` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -59,8 +89,6 @@
         `description` varchar(255),
         `moment` datetime(6),
         `reward` double precision,
-        `stars` integer,
-        `telephone` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
         primary key (`id`)
