@@ -54,7 +54,6 @@ public class AnonymousRecordCompanyShowService implements AbstractShowService<An
 			res = result.getName() + ".llc";
 			result.setName(res);
 		}
-
 		return result;
 	}
 
