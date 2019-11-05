@@ -38,6 +38,33 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `record_company` (
+       `id` integer not null,
+        `version` integer not null,
+        `ceo` varchar(255),
+        `description` varchar(255),
+        `email` varchar(255),
+        `incorporated` bit not null,
+        `name` varchar(255),
+        `sector` varchar(255),
+        `telephone` integer,
+        `website` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `request` (
+       `id` integer not null,
+        `version` integer not null,
+        `deadline` datetime(6),
+        `description` varchar(255),
+        `moment` datetime(6),
+        `reward` double precision,
+        `telephone` integer,
+        `ticker` varchar(255),
+        `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `user_account` (
        `id` integer not null,
         `version` integer not null,
