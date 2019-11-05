@@ -312,7 +312,7 @@ Company records
 + CEO : String {NotBlank}
 + description: String{NotBlank}
 + website : String{URL}
-+ telephone: Integer{Digits(10)}
++ telephone:String
 + email: String{Not Blank,Email}
 + incorporated: boolean</panel_attributes>
     <additional_attributes/>
@@ -334,7 +334,7 @@ Request
 + description:String{NotBlank}
 + reward:Double{Digits(10,2)}
 + ticker:String{Unique,NotBlank}
-+ telephone:Integer{Digits(9,0)}</panel_attributes>
++ telephone:String</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
