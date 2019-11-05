@@ -1,7 +1,8 @@
 
 package acme.features.anonymous.announcement;
 
-import java.util.Collection;
+import java.util.Date;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -15,7 +16,7 @@ public interface AnonymousAnnouncementRepository extends AbstractRepository {
 	@Query("select a from Announcement a where a.id = ?1")
 	Announcement findOneById(int id);
 
-	@Query("select a from Announcement a ")
-	Collection<Announcement> findManyAll();
+	@Query("select a from Announcement a where a.moment >= ?1")
+	List<Announcement> findManyAll(Date date);
 
 }
