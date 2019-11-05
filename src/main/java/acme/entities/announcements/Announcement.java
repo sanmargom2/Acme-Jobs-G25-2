@@ -26,6 +26,7 @@ public class Announcement extends DomainEntity {
 
 	//Atributes ---------------------------------------
 
+
 	@NotBlank
 	private String				title;
 

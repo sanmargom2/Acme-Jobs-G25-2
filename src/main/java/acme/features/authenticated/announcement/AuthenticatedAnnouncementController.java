@@ -22,7 +22,6 @@ public class AuthenticatedAnnouncementController extends AbstractController<Auth
 	@Autowired
 	private AuthenticatedAnnouncementShowService	showService;
 
-
 	@PostConstruct
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.LIST, this.listService);

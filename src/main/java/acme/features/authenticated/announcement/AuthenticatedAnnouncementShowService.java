@@ -13,7 +13,7 @@ import acme.framework.services.AbstractShowService;
 @Service
 public class AuthenticatedAnnouncementShowService implements AbstractShowService<Authenticated, Announcement> {
 
-	// Internal Service -----------------------------------------------
+	// Internal State -------------------------------------------------
 
 	@Autowired
 	AuthenticatedAnnouncementRepository repository;
@@ -47,5 +47,4 @@ public class AuthenticatedAnnouncementShowService implements AbstractShowService
 
 		request.unbind(entity, model, "moment", "title");
 	}
-
 }
