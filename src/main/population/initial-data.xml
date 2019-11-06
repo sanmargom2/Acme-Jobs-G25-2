@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--
-- initial-data.xml
--
-- Copyright (c) 2019 Rafael Corchuelo.
--
-- In keeping with the traditional purpose of furthering education and research, it is
-- the policy of the copyright owner to permit non-commercial use and redistribution of
-- this software. It has been tested carefully, but it is not guaranteed for any particular
-- purposes.  The copyright owner does not offer any warranties or representations, nor do
-- they accept any liabilities with respect to them.
--->
+<!-- - initial-data.xml - - Copyright (c) 2019 Rafael Corchuelo. - - In keeping with the traditional purpose of furthering education 
+	and research, it is - the policy of the copyright owner to permit non-commercial use and redistribution of - this software. It has been 
+	tested carefully, but it is not guaranteed for any particular - purposes. The copyright owner does not offer any warranties or representations, 
+	nor do - they accept any liabilities with respect to them. -->
 
-<beans 
-	xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
->
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<import resource="conversion-service.xml"/>
-	
+	<import resource="conversion-service.xml" />
+
 	<!-- Anonymous user -->
 
 	<bean name="anonymousUserAccount" class="acme.framework.entities.UserAccount">
@@ -45,7 +35,7 @@
 	</bean>
 
 	<!-- Administrators -->
-	
+
 	<bean name="administratorUserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="administrator" />
 		<property name="password" value="administrator" />
@@ -68,9 +58,17 @@
 	<bean name="administratorAdministrator" class="acme.framework.entities.Administrator">
 		<property name="userAccount" ref="administratorUserAccount" />
 	</bean>
-	
+
 	<bean name="administratorAuthenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="administratorUserAccount" />
 	</bean>
-	
+
+	<!-- Customisation -->
+	<bean id="customisation" class="acme.entities.customisations.Customisation">
+		<property name="customisationsEn" value="“sex, hard core, viagra, cialis,  nigeria, you’ve won, million dollar" />
+		<property name="customisationsEs" value="“sexo, hard core viagra, cialis,  nigeria, has ganado, millon dolares" />
+
+		<property name="threshold" value="1.00" />
+	</bean>
+
 </beans>

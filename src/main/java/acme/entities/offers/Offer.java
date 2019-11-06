@@ -22,36 +22,41 @@ import lombok.Setter;
 @Setter
 public class Offer extends DomainEntity {
 
-	//Serialisation identifier
 
-	private static final long	serialVersionUID	= 1L;
+	// Serialisation identifier
 
-	//Attributes
+	private static final long serialVersionUID = 1L;
+
+	// Attributes
+
 
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "^O[a-zA-Z]{4}-\\d{5}$")
-	private String				ticker;
+
+	private String ticker;
 
 	@NotBlank
-	private String				title;
+	private String title;
 
 	@NotNull
-	private Money				min;
+	private Money min;
 
 	@NotNull
-	private Money				max;
+	private Money max;
 
 	@NotBlank
-	private String				text;
+	private String text;
+
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	private Date				moment;
+
+	private Date moment;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				deadline;
+	private Date deadline;
 
 }

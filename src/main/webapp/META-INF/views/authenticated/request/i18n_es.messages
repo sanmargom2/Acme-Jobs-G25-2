@@ -18,4 +18,6 @@ authenticated.request.form.label.description=Descripción
 authenticated.request.form.label.ticker=Tipo
 authenticated.request.form.label.reward=Compensación económica
 authenticated.request.form.button.return=Return
-master.menu.request=Petición
+authenticated.request.form.label.stars=Estrellas
+master.menu.request=Petición 
+master.menu.authenticated.request=Petición

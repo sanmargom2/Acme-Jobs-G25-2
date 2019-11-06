@@ -20,11 +20,12 @@ import lombok.Setter;
 @Setter
 public class Announcement extends DomainEntity {
 
-	//Serialisation identifier
+	//Serialisation indetifier ------------------------
 
 	private static final long	serialVersionUID	= 1L;
 
-	//Attributes
+	//Atributes ---------------------------------------
+
 
 	@NotBlank
 	private String				title;
@@ -33,10 +34,11 @@ public class Announcement extends DomainEntity {
 	@Past
 	private Date				moment;
 
+	
 	@URL
 	private String				moreInfo;
 
 	@NotBlank
 	private String				text;
-
 }
+
