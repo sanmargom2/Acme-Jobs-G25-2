@@ -41,3 +41,4 @@ public class Announcement extends DomainEntity {
 	@NotBlank
 	private String				text;
 }
+

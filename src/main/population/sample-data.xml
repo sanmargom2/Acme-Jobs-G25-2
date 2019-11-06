@@ -5,10 +5,12 @@
 	carefully, but it is not guaranteed for any particular - purposes. The copyright owner does not offer any warranties or representations, 
 	nor do - they accept any liabilities with respect to them. -->
 
+
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<import resource="conversion-service.xml" />
+
 
 	<!-- Challenges -->
 
@@ -63,6 +65,7 @@
 	</bean>
 
 	<!-- Record company -->
+
 	<bean id="recordCompany01" class="acme.entities.recordCompanies.RecordCompany">
 		<property name="name" value="Enterprise1" />
 		<property name="CEO" value="Kobe Bryant" />
@@ -97,6 +100,7 @@
 	</bean>
 
 	<!-- Request -->
+
 	<bean id="request01" class="acme.entities.requests.Request">
 		<property name="title" value="Hola" />
 		<property name="moment" value="2010/07/11 20:00" />
@@ -105,7 +109,9 @@
 		<property name="reward" value="30000" />
 		<property name="telephone" value="+34 (963) 258741" />
 		<property name="ticker" value="RXXXX-99999" />
+
 		<property name="stars" value="2" />
+
 	</bean>
 
 	<bean id="request02" class="acme.entities.requests.Request">
@@ -116,6 +122,7 @@
 		<property name="reward" value="60000" />
 		<property name="telephone" value="+88 (666) 6666633" />
 		<property name="ticker" value="RXXXA-99910" />
+
 		<property name="stars" value="4" />
 	</bean>
 
@@ -257,6 +264,7 @@
 		<property name="skills" value="Patience" />
 		<property name="studies" value="Chemistry" />
 		<property name="moment" value="2019/05/31 18:00" />
+
 	</bean>
 
 </beans>

@@ -22,15 +22,18 @@ import lombok.Setter;
 @Setter
 public class Offer extends DomainEntity {
 
+
 	// Serialisation identifier
 
 	private static final long serialVersionUID = 1L;
 
 	// Attributes
 
+
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "^O[a-zA-Z]{4}-\\d{5}$")
+
 	private String ticker;
 
 	@NotBlank
@@ -45,9 +48,11 @@ public class Offer extends DomainEntity {
 	@NotBlank
 	private String text;
 
+
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
+
 	private Date moment;
 
 	@NotNull
