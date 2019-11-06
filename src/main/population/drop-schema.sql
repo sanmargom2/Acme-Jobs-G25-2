@@ -31,6 +31,8 @@
 
     drop table if exists `consumer`;
 
+    drop table if exists `curriculum`;
+
     drop table if exists `customisation`;
 
     drop table if exists `investor`;
@@ -42,6 +44,8 @@
     drop table if exists `record_company`;
 
     drop table if exists `request`;
+
+    drop table if exists `shout`;
 
     drop table if exists `user_account`;
 

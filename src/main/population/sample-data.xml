@@ -207,11 +207,56 @@
 		<property name="moment" value="2019/02/06 09:30" />
 		<property name="deadline" value="2020/09/06 12:00" />
 	</bean>
+
 	<!-- Customisation -->
 	<bean id="customisation" class="acme.entities.customisations.Customisation">
-		<property name="customisationsEn" value="“sex, hard core, viagra, cialis,  nigeria, you’ve won, million dollar"/>
-		<property name="customisationsEs" value="“sexo, hard core viagra, cialis,  nigeria, has ganado, millon dolares"/>
-		
-		<property name="threshold" value="1.00"/>
+		<property name="customisationsEn" value="“sex, hard core, viagra, cialis,  nigeria, you’ve won, million dollar" />
+		<property name="customisationsEs" value="“sexo, hard core viagra, cialis,  nigeria, has ganado, millon dolares" />
+
+		<property name="threshold" value="1.00" />
 	</bean>
+
+	<!-- Shouts -->
+
+	<bean id="shout01" class="acme.entities.shouts.Shout">
+		<property name="author" value="John Doe" />
+		<property name="text" value="I´m happy!" />
+		<property name="moment" value="2019/09/09 10:00" />
+	</bean>
+
+	<bean id="shout02" class="acme.entities.shouts.Shout">
+		<property name="author" value="Jane Doe" />
+		<property name="text" value="I´m the master of the room!" />
+		<property name="moment" value="2019/08/09 15:55" />
+	</bean>
+
+	<bean id="shout03" class="acme.entities.shouts.Shout">
+		<property name="author" value="Foo Bar" />
+		<property name="text" value="Just turning 20!" />
+		<property name="moment" value="2019/09/07 00:00" />
+	</bean>
+
+	<!-- Curriculums -->
+
+	<bean id="curriculum01" class="acme.entities.curriculums.Curriculum">
+		<property name="name" value="Peter Parker" />
+		<property name="skills" value="I can fly" />
+		<property name="studies" value="Biology" />
+		<property name="moment" value="2017/06/15 10:00" />
+	</bean>
+
+	<bean id="curriculum02" class="acme.entities.curriculums.Curriculum">
+		<property name="name" value="John Bryant" />
+		<property name="skills" value="TeamWorker" />
+		<property name="studies" value="Computer Sciences" />
+		<property name="moment" value="2016/10/11 20:30" />
+
+	</bean>
+	<bean id="curriculum03" class="acme.entities.curriculums.Curriculum">
+		<property name="name" value="Homer Jordan" />
+		<property name="skills" value="Patience" />
+		<property name="studies" value="Chemistry" />
+		<property name="moment" value="2019/05/31 18:00" />
+	</bean>
+
 </beans>

@@ -11,14 +11,16 @@
 --%>
 
 <%@page language="java"%>
-
+ 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form readonly="true">
-	<acme:form-textarea code="administrator.customisation.form.label.customisations" path="customisationsEs"/>
-	<acme:form-double code="administrator.customisation.form.label.threshold" path="threshold"/>
-
+<acme:form>
+	<acme:form-textbox code="anonymous.curriculum.form.label.name" path="name"/>
+	<acme:form-textarea code="anonymous.curriculum.form.label.skills" path="skills"/>
+	<acme:form-textarea code="anonymous.curriculum.form.label.studies" path="studies"/>
 	
-	<acme:form-return code="administrator.customisation.form.label.return"/>
+	
+	<acme:form-submit code="anonymous.curriculum.form.button.create" action="/anonymous/curriculum/create"/>
+	<acme:form-return code="anonymous.curriculum.form.button.return" />
 </acme:form>

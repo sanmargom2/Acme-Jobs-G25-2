@@ -330,12 +330,134 @@ Request
 --
 + title:String{NotBlank}
 + moment:Date{Temporal(TIMESTAMP),Past}
-+ deadline:Date{Temporal(TIMESTAMP),Future}
++ deadline:Date{Temporal(TIMESTAMP)}
 + description:String{NotBlank}
 + reward:Double{Digits(10,2)}
 + ticker:String{Unique,NotBlank}
 + telephone:String
 + stars:Integer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>413</y>
+      <w>217</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Announcement
+--
++title:String{NotBlank}
++moment:Date{Temporal(TIMESTAMP),Past}
++moreInfo:String{URL}
++text:String{NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>399</y>
+      <w>189</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Challenge
+--
++title:String{NotBlank}
++ description:String{NotBlank}
++ deadline:Date{Temporal(TIMESTAMP)}
++ rewardGoalGold:Integer{NotNull}
++ rewardGoalSilver:Integer{NotNull}
++ rewardGoalBronze:Integer{NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>805</x>
+      <y>476</y>
+      <w>217</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Offer
+--
++ ticker:String{Unique,NotBlank}
++ title:String{NotBlank}
++ moment:Date{Temporal(TIMESTAMP),Past}
++ text:String{NotBlank}
++ min:Money{NotNull}
++ max:Money{NotNull}
++ deadline:Date{Temporal(TIMESTAMP)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>889</x>
+      <y>112</y>
+      <w>154</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Investor
+--
++ name: String {NotBlank}
++ sector: String {NotBlank}
++ statement:String{NotBlank}
++ stars:Integer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>875</x>
+      <y>238</y>
+      <w>175</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Customisation
+--
++ customisationsEs:String{NotBlank}
++ customisationsEn:String{NotBlank}
++ threshold:Double{NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>819</x>
+      <y>336</y>
+      <w>224</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Shout
+--
++ moment: Date(Temporal(TIMESTAMP), Past)
++ author : String (NotBlank)
++ text: String (NotBlank)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>63</x>
+      <y>539</y>
+      <w>217</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Curriculum
+--
++name:String{NotBlank}
++skills:String{NotBlank}
++studies:String{NotBlank}
++moment:Date{Temporal(TIMESTAMP),Past}</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

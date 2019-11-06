@@ -15,8 +15,8 @@ anonymous.record-company.list.label.website=Página web
 anonymous.record-company.list.label.ceo=Nombre del encargado
 anonymous.record-company.list.label.email=Email
 anonymous.record-company.list.label.incorporated=Incorporada
-master.menu.record-company=Compañía
-master.menu.anonymous.record-company = Compañía
+master.menu.record-company=Empresa
+master.menu.anonymous.record-company = Empresa
 
 
 anonymous.record-company.form.label.name=Nombre

@@ -1,5 +1,5 @@
 <%--
-- form.jsp
+- list.jsp
 -
 - Copyright (c) 2019 Rafael Corchuelo.
 -
@@ -15,10 +15,14 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form readonly="true">
-	<acme:form-textarea code="administrator.customisation.form.label.customisations" path="customisationsEs"/>
-	<acme:form-double code="administrator.customisation.form.label.threshold" path="threshold"/>
+<acme:list readonly="true">
+	<acme:list-column code="anonymous.curriculum.list.label.moment" path="moment" width="20%"/>
+	<acme:list-column code="anonymous.curriculum.list.label.name" path="name" width="20%"/>
+	<acme:list-column code="anonymous.curriculum.list.label.skills" path="skills" width="30%"/>
+	<acme:list-column code="anonymous.curriculum.list.label.studies" path="studies" width="30%"/>
+</acme:list>
 
-	
-	<acme:form-return code="administrator.customisation.form.label.return"/>
+<acme:form>
+	<acme:menu-option code="anonymous.curriculum.list.button.add" action="/anonymous/curriculum/create"/>
 </acme:form>
+
