@@ -31,13 +31,11 @@
 
     drop table if exists `consumer`;
 
-
     drop table if exists `curriculum`;
 
     drop table if exists `customisation`;
 
     drop table if exists `investor`;
-
 
     drop table if exists `offer`;
 

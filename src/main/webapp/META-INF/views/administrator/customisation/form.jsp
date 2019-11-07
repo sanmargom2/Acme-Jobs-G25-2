@@ -16,9 +16,10 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-	<acme:form-textarea code="administrator.customisation.form.label.customisations" path="customisationsEs"/>
-	<acme:form-double code="administrator.customisation.form.label.threshold" path="threshold"/>
+	<acme:form-textarea code="administrator.customisation.form.label.customisationsEs" path="customisationsEs" />
+	<acme:form-textarea code="administrator.customisation.form.label.customisationsEn" path="customisationsEn" />
+	<acme:form-double code="administrator.customisation.form.label.threshold" path="threshold" />
 
-	
-	<acme:form-return code="administrator.customisation.form.label.return"/>
+
+	<acme:form-return code="administrator.customisation.form.label.return" />
 </acme:form>
